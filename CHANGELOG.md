@@ -1,5 +1,64 @@
 # Changelog
 
+## [3.0.0](https://github.com/terraform-google-modules/terraform-example-foundation/compare/v2.3.1...v3.0.0) (2022-10-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* bump min TF version to 1.3.0 and use optionals (#831)
+* use remote state to read data from previous steps (#782)
+* Configure bring your own service account in bootstrap (#777)
+* add granular service accounts (#724)
+* **deps:** update terraform null to v3 (#750)
+* use branch main for the gcp-policies repository and use controller for Jenkins master (#738)
+* split network step (#735)
+
+### Features
+
+* add granular service accounts ([#724](https://github.com/terraform-google-modules/terraform-example-foundation/issues/724)) ([4c84d80](https://github.com/terraform-google-modules/terraform-example-foundation/commit/4c84d80a500ccf658f1a8d792d3a78aef8cfaa24))
+* add optional groups creation ([#757](https://github.com/terraform-google-modules/terraform-example-foundation/issues/757)) ([5d9f867](https://github.com/terraform-google-modules/terraform-example-foundation/commit/5d9f867ea544738333025a4af21eb18319ff2803))
+* Add support for tags ([#829](https://github.com/terraform-google-modules/terraform-example-foundation/issues/829)) ([a0604b3](https://github.com/terraform-google-modules/terraform-example-foundation/commit/a0604b3aff804e2c33c6d936c72d356c263bfcb1))
+* Bring your on Service Account for the App Infra Pipeline ([#824](https://github.com/terraform-google-modules/terraform-example-foundation/issues/824)) ([0d6be42](https://github.com/terraform-google-modules/terraform-example-foundation/commit/0d6be422b8f1f60a8927ae53b3bff698447eb231))
+* bump min TF version to 1.3.0 and use optionals ([#831](https://github.com/terraform-google-modules/terraform-example-foundation/issues/831)) ([6207113](https://github.com/terraform-google-modules/terraform-example-foundation/commit/62071133e5e8c98383abbf703d9237938490c581))
+* Configure bring your own service account in bootstrap ([#777](https://github.com/terraform-google-modules/terraform-example-foundation/issues/777)) ([015fe3d](https://github.com/terraform-google-modules/terraform-example-foundation/commit/015fe3d5716e9210cc45af9be73ae673e58df5fa))
+* Create base environment module for step 4-projects ([#669](https://github.com/terraform-google-modules/terraform-example-foundation/issues/669)) ([7a533bf](https://github.com/terraform-google-modules/terraform-example-foundation/commit/7a533bf0f41bb2e6681c4c58267eb2cce795206c))
+* **deps:** update terraform null to v3 ([#750](https://github.com/terraform-google-modules/terraform-example-foundation/issues/750)) ([b2e8bfc](https://github.com/terraform-google-modules/terraform-example-foundation/commit/b2e8bfc0f1ce846ebf9ae9fcfd9993447f3f9fe0))
+* Enable Essential Contacts ([#783](https://github.com/terraform-google-modules/terraform-example-foundation/issues/783)) ([86fcb2a](https://github.com/terraform-google-modules/terraform-example-foundation/commit/86fcb2a4716511d95ded2729f040e56b2d415575))
+* Feature/private service connect module ([#722](https://github.com/terraform-google-modules/terraform-example-foundation/issues/722)) ([b3b9145](https://github.com/terraform-google-modules/terraform-example-foundation/commit/b3b9145d1bae356ba01d33d66df55efd9b6e59c0))
+* ingress egress support for vpc sc ([#784](https://github.com/terraform-google-modules/terraform-example-foundation/issues/784)) ([c6f12e2](https://github.com/terraform-google-modules/terraform-example-foundation/commit/c6f12e22c735e97ff1644bd8e51cee2eb3941b18))
+* Modularize logging components ([#781](https://github.com/terraform-google-modules/terraform-example-foundation/issues/781)) ([a1d636e](https://github.com/terraform-google-modules/terraform-example-foundation/commit/a1d636e550d133abffe2240f795d331e9d691c3c))
+* new org policies ([#791](https://github.com/terraform-google-modules/terraform-example-foundation/issues/791)) ([878da45](https://github.com/terraform-google-modules/terraform-example-foundation/commit/878da4598d3fa1562e19e1af6a9e5805b13696e4))
+* Refactor/centralized network variable ([#665](https://github.com/terraform-google-modules/terraform-example-foundation/issues/665)) ([cdb97bf](https://github.com/terraform-google-modules/terraform-example-foundation/commit/cdb97bf306c316d4dea71d12f41b88bb02a9f92d))
+* Remove redundant optional firewall rules ([#647](https://github.com/terraform-google-modules/terraform-example-foundation/issues/647)) ([6e17729](https://github.com/terraform-google-modules/terraform-example-foundation/commit/6e1772942f08e6cafa9c167f6eff6e9ee8434a25))
+* split network step ([#735](https://github.com/terraform-google-modules/terraform-example-foundation/issues/735)) ([512430b](https://github.com/terraform-google-modules/terraform-example-foundation/commit/512430b1982d89834d9c05a8fab1536ead39f3a7))
+* update 3-networks to support TPG 4 and other updates ([#733](https://github.com/terraform-google-modules/terraform-example-foundation/issues/733)) ([d940f6e](https://github.com/terraform-google-modules/terraform-example-foundation/commit/d940f6e3401ad3f19987acf56ba70b086bb2a855))
+* update document and script to use gcloud beta terraform vet ([#729](https://github.com/terraform-google-modules/terraform-example-foundation/issues/729)) ([d1a56d4](https://github.com/terraform-google-modules/terraform-example-foundation/commit/d1a56d408cdb6ef95da51c685d6beaf5f6a0b07d))
+* use branch main for the gcp-policies repository and use controller for Jenkins master ([#738](https://github.com/terraform-google-modules/terraform-example-foundation/issues/738)) ([afc9d71](https://github.com/terraform-google-modules/terraform-example-foundation/commit/afc9d71869674ef85475ec9fefb4961a9d137394))
+* use remote state to read data from previous steps ([#782](https://github.com/terraform-google-modules/terraform-example-foundation/issues/782)) ([a761a99](https://github.com/terraform-google-modules/terraform-example-foundation/commit/a761a99f8f4ad93b7fec37887bc34848015eb091))
+* validate requirements script ([#765](https://github.com/terraform-google-modules/terraform-example-foundation/issues/765)) ([84bbd25](https://github.com/terraform-google-modules/terraform-example-foundation/commit/84bbd257095152babdc143a6381a48fd70dbe375))
+
+
+### Bug Fixes
+
+* add a chmod command for project infra pipeline runners([#657](https://github.com/terraform-google-modules/terraform-example-foundation/issues/657)) ([2730050](https://github.com/terraform-google-modules/terraform-example-foundation/commit/2730050a8ce69e125cc4b2e6d03934d7b34d7a10))
+* always grant view permissions at org to CB SA for TFV ([#645](https://github.com/terraform-google-modules/terraform-example-foundation/issues/645)) ([66d4c5b](https://github.com/terraform-google-modules/terraform-example-foundation/commit/66d4c5b3332571f416c06041701a29c5dc82857e))
+* backend_bucket &gt; remote_state_bucket ([#848](https://github.com/terraform-google-modules/terraform-example-foundation/issues/848)) ([75c5ab3](https://github.com/terraform-google-modules/terraform-example-foundation/commit/75c5ab31bffaee5f255bd1b48c03bcaac6f738de))
+* bump the version of project factory to 13.0 ([#702](https://github.com/terraform-google-modules/terraform-example-foundation/issues/702)) ([78c7d90](https://github.com/terraform-google-modules/terraform-example-foundation/commit/78c7d906021327f415ed9ca6ed35964a0e28a4cb))
+* bump the version of the cloudbuild in the bootstrap step ([#642](https://github.com/terraform-google-modules/terraform-example-foundation/issues/642)) ([3f61dba](https://github.com/terraform-google-modules/terraform-example-foundation/commit/3f61dbaab143d5ca2fdaebb53bb4f858ac4218a8))
+* create billing dataset in multi-regional by default ([#799](https://github.com/terraform-google-modules/terraform-example-foundation/issues/799)) ([ca0a4b3](https://github.com/terraform-google-modules/terraform-example-foundation/commit/ca0a4b3f85bfeac28206aab9c8d0de158db5752d))
+* data_access_logs_enabled now enables read and write audit logs, defaults to false for cost savings ([#630](https://github.com/terraform-google-modules/terraform-example-foundation/issues/630)) ([8391f1b](https://github.com/terraform-google-modules/terraform-example-foundation/commit/8391f1bd4322fec04fda7509b537c5f66cddbbd9))
+* exclude version `4.31.0` from the possible versions for infra pipeline module ([#771](https://github.com/terraform-google-modules/terraform-example-foundation/issues/771)) ([37ba8ba](https://github.com/terraform-google-modules/terraform-example-foundation/commit/37ba8ba669475682136d576f5db6c252ab1e193f))
+* grant permissions required by TFV to CB SA ([#629](https://github.com/terraform-google-modules/terraform-example-foundation/issues/629)) ([ffa6a93](https://github.com/terraform-google-modules/terraform-example-foundation/commit/ffa6a93582bdf242bf273a2ff2e984cf6149bb89))
+* Grant role browser to the terraform service account for running gcloud beta terraform vet ([#818](https://github.com/terraform-google-modules/terraform-example-foundation/issues/818)) ([e80a504](https://github.com/terraform-google-modules/terraform-example-foundation/commit/e80a5040cbb9f84a78a6ce56590d7ef187e2d92b))
+* hardcode the regions variables in the `3-networks/shared` ([#699](https://github.com/terraform-google-modules/terraform-example-foundation/issues/699)) ([9c320d8](https://github.com/terraform-google-modules/terraform-example-foundation/commit/9c320d8326c9dcd0799093a985fdb0fc2fe7cf04))
+* Hub and Spoke build ([#648](https://github.com/terraform-google-modules/terraform-example-foundation/issues/648)) ([98a3441](https://github.com/terraform-google-modules/terraform-example-foundation/commit/98a344146a4852d54aa0ca1302639166a3e2392f))
+* make first gcloud builds submit wait for the creation of the default cloud build bucket ([#719](https://github.com/terraform-google-modules/terraform-example-foundation/issues/719)) ([3e2ca41](https://github.com/terraform-google-modules/terraform-example-foundation/commit/3e2ca413d2fd57c309748109f56008be2503ff9a))
+* set the location for cloud build related buckets in step4 based in the default region ([#667](https://github.com/terraform-google-modules/terraform-example-foundation/issues/667)) ([b2b3aca](https://github.com/terraform-google-modules/terraform-example-foundation/commit/b2b3acaaee51942b1f2f90b08c2b79bfc40b4205))
+* update TPG version constraints to allow 4.0 in 5-app-infra ([#721](https://github.com/terraform-google-modules/terraform-example-foundation/issues/721)) ([90f15f2](https://github.com/terraform-google-modules/terraform-example-foundation/commit/90f15f28c03f391dc95aaa843f1a5727772bd8e4))
+* updates for on-prem connectivity configuration ([#827](https://github.com/terraform-google-modules/terraform-example-foundation/issues/827)) ([70f9e54](https://github.com/terraform-google-modules/terraform-example-foundation/commit/70f9e5487f52a958ede05e35d5599ed6d4297dad))
+* updates for tfv1 compat ([#637](https://github.com/terraform-google-modules/terraform-example-foundation/issues/637)) ([235698b](https://github.com/terraform-google-modules/terraform-example-foundation/commit/235698b4312e1afa1cdf7268c27eba820543b94f))
+* VPC Flow Logs constraint issue + Adding gcloud terraform vet usage to test ([#779](https://github.com/terraform-google-modules/terraform-example-foundation/issues/779)) ([0019b00](https://github.com/terraform-google-modules/terraform-example-foundation/commit/0019b006da532b37ec6ed1637ac15a0ccbb9b51b))
+
 ### [2.3.1](https://www.github.com/terraform-google-modules/terraform-example-foundation/compare/v2.3.0...v2.3.1) (2021-10-15)
 
 
